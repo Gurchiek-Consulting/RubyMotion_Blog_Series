@@ -11,6 +11,11 @@ class LoginController < UIViewController
 
     view.backgroundColor = UIColor.whiteColor
  
+    view.loginButton.addTarget(self, action: :accountSummary, forControlEvents: UIControlEventTouchUpInside)
+  end
+
+  def accountSummary
+    navigationController.pushViewController(AccountSummaryController.new, animated: true)
   end
 
 end
